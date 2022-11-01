@@ -1,1 +1,17 @@
-<p>lista-empleados works!</p>
+<h2>Lista empleados</h2>
+<table class="table table-striped">
+    <head class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+        </tr>
+    </head>
+    <tbody class="table-dark">
+        <tr *ngfor="let empleado of empleados">
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.apellido}}</td>
+            <td>{{empleado.email}}</td>
+        </tr>
+    </tbody>
+</table>
