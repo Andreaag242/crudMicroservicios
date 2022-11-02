@@ -1,13 +1,13 @@
 <h2>Lista empleados</h2>
 <table class="table table-striped">
-    <head class="table-dark">
+    <thead class="table-dark">
         <tr>
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Email</th>
         </tr>
-    </head>
-    <tbody class="table-dark">
+    </thead>
+    <tbody>
         <tr *ngfor="let empleado of empleados">
             <td>{{empleado.nombre}}</td>
             <td>{{empleado.apellido}}</td>
