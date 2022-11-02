@@ -8,10 +8,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngfor="let empleado of empleados">
+        <tr *ngFor="let empleado of empleados">
             <td>{{empleado.nombre}}</td>
             <td>{{empleado.apellido}}</td>
             <td>{{empleado.email}}</td>
+            <td><button (click)="verDetallesEmpleado(empleado.id)" class="btn btn-info">Ver Detalles</button></td>
+            <td><button (click)="actualizarEmpleado(empleado.id)" class="btn btn-info" style="margin-left : 10px">Editar</button></td>
+            <td><button (click)="eliminarEmpleado(empleado.id)" class="btn btn-info" style="margin-left : 10px">Eliminar</button></td>
         </tr>
     </tbody>
 </table>
