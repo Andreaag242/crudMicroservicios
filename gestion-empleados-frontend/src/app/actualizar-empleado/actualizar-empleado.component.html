@@ -5,7 +5,7 @@
         <label>Nombre : </label>
         <input type = "text" class="form-control" id = "nombre" [(ngModel)] = "empleado.nombre" name = "nombre" required minlength="3" maxlength="10"placeholder="Digite su nombre" #nombre = "ngModel">
         <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
-          <div *ngIf="apellido.errors.required">
+          <div *ngIf="apellido.errors?.['required']">
               Digite su nombre por favor
           </div>
       </div>
@@ -15,7 +15,7 @@
         <label>Apellido : </label>
         <input type = "text" class="form-control" id = "apellido" [(ngModel)] = "empleado.apellido" name = "apellido" required minlength="4" maxlength="10" placeholder="Digite su apellido " #apellido = "ngModel">
         <div class="alert alert-danger" *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)">
-          <div *ngIf="apellido.errors.required">
+          <div *ngIf="apellido.errors?.['required']">
               Digite su apellido por favor
           </div>
         </div>
@@ -24,10 +24,10 @@
         <label>Email : </label>
         <input type = "email" class="form-control" id = "email" [(ngModel)]="empleado.email" name = "email" pattern ="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required placeholder="Digite su email " #email = "ngModel">
         <div class="alert alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
-          <div *ngIf="email.errors.required">
+          <div *ngIf="email.errors?.['required']">
               Digite su email por favor
           </div>
-          <div *ngIf="email.errors.pattern">
+          <div *ngIf="email.errors?.['pattern']">
               Verifique que el formato de su email sea correcto "holaMundo@gmail.com"
           </div>
       </div>

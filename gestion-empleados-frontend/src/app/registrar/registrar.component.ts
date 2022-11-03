@@ -1,3 +1,4 @@
+import swal from 'sweetalert2';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Empleado } from '../empleado';
@@ -26,6 +27,7 @@ export class RegistrarComponent implements OnInit {
   
   irALaListaDeEmpleados(){
     this.router.navigate(["/empleados"]);
+    swal('Empleado insertado',`El empleado ${this.empleado.nombre} ha sido insertado con exito`,`success`);
   }
 
   onSubmit(){

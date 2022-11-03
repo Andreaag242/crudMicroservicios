@@ -33,5 +33,6 @@
     "strictFunctionTypes": false,
     "strictBindCallApply":false,
     "strictPropertyInitialization":false
+    
   }
 }
